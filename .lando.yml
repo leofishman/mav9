@@ -1,0 +1,23 @@
+name: mav9
+
+recipe: pantheon
+
+config:
+  framework: drupal8
+  site: mav9
+  id: 914e5154-7c96-4fef-9d8d-317ff8e70798
+  xdebug: true
+  config:
+    php: config/php.ini
+  # Disable the SOLR index
+  index: false
+  # Disable the VARNISH edge
+  edge: false
+  # Disable the REDIS cache
+  cache: false
+
+tooling:
+  drush:
+    service: appserver
+    env:
+      DRUSH_OPTIONS_URI: "https://mav9.lndo.site"
