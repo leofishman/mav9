@@ -1,0 +1,14 @@
+uuid: 8a062935-0b83-4a12-bf7b-85ba4fe49f99
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - leo@makeavent.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''
