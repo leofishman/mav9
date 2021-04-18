@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1428864c3fdff6d871b49d5157736347",
+    "content-hash": "bd280d51f3cc99ec1486eae590cafb17",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2473,6 +2473,52 @@
                 "source": "https://gitlab.com/drupalspoons/devel",
                 "issues": "https://gitlab.com/drupalspoons/devel/-/issues",
                 "slack": "https://drupal.slack.com/archives/C012WAW1MH6"
+            }
+        },
+        {
+            "name": "drupal/social_link_field",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/social_link_field.git",
+                "reference": "1719dd6de8d9a4ddad9857cbc69bba731dc0a05e"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1-alpha1+1-dev",
+                    "datestamp": "1612006343",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Hryshkanych",
+                    "homepage": "https://www.drupal.org/u/romixua"
+                },
+                {
+                    "name": "voleger",
+                    "homepage": "https://www.drupal.org/user/3260314"
+                }
+            ],
+            "description": "Provide field type with social links.",
+            "homepage": "https://www.drupal.org/project/social_link_field",
+            "support": {
+                "source": "http://cgit.drupalcode.org/social_link_field",
+                "issues": "https://www.drupal.org/project/issues/social_link_field"
             }
         },
         {
@@ -7460,6 +7506,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/social_link_field": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
