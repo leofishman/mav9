@@ -18,6 +18,10 @@
         "drupal/devel": "^4.1",
         "drush/drush": "^10",
         "pantheon-upstreams/upstream-configuration": "*"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
     },
     "conflict": {
         "drupal/drupal": "*"
