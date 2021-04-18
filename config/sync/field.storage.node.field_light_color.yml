@@ -1,0 +1,20 @@
+uuid: d75ced5b-87bf-4efc-a213-0cae247b4d8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - color_field
+    - node
+id: node.field_light_color
+field_name: field_light_color
+entity_type: node
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

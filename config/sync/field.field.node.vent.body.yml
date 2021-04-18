@@ -1,0 +1,23 @@
+uuid: fad42655-e7b7-4a20-b339-85ebda1dc108
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.vent
+  module:
+    - text
+id: node.vent.body
+field_name: body
+entity_type: node
+bundle: vent
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

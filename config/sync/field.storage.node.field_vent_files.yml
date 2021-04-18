@@ -1,0 +1,19 @@
+uuid: 197f3529-23bc-4de6-89e3-6498c5ad6ae2
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_vent_files
+field_name: field_vent_files
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

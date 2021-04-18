@@ -1,0 +1,21 @@
+uuid: 88bdf66f-6f8c-4d46-a030-67c031b8a37f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company_name
+    - node.type.vent
+id: node.vent.field_company_name
+field_name: field_company_name
+entity_type: node
+bundle: vent
+label: 'Company Name'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Company Name'
+default_value_callback: ''
+settings: {  }
+field_type: string

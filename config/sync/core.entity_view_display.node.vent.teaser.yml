@@ -1,0 +1,44 @@
+uuid: 787be5a6-df08-4d88-a851-cf5963ce7aad
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.vent.body
+    - field.field.node.vent.field_company_description
+    - field.field.node.vent.field_company_name
+    - field.field.node.vent.field_dark_color
+    - field.field.node.vent.field_light_color
+    - field.field.node.vent.field_primary_color
+    - field.field.node.vent.field_social_media
+    - field.field.node.vent.field_vent_files
+    - node.type.vent
+  module:
+    - text
+    - user
+id: node.vent.teaser
+targetEntityType: node
+bundle: vent
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_company_description: true
+  field_company_name: true
+  field_dark_color: true
+  field_light_color: true
+  field_primary_color: true
+  field_social_media: true
+  field_vent_files: true
