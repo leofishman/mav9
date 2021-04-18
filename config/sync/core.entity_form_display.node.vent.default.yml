@@ -57,27 +57,21 @@ content:
     region: content
   field_dark_color:
     weight: 126
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: color_field_widget_html5
     region: content
   field_light_color:
     weight: 127
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: color_field_widget_html5
     region: content
   field_primary_color:
     weight: 125
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: color_field_widget_html5
     region: content
   field_social_media:
     weight: 128
