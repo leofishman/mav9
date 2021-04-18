@@ -15,6 +15,7 @@
     ],
     "require": {
         "drupal/admin_toolbar": "^3.0",
+        "drupal/color_field": "^2.4",
         "drupal/devel": "^4.1",
         "drush/drush": "^10",
         "pantheon-upstreams/upstream-configuration": "*"
