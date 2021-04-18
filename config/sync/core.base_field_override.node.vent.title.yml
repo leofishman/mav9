@@ -1,0 +1,18 @@
+uuid: 8b54f81e-f259-4219-90d7-4c405e02559a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.vent
+id: node.vent.title
+field_name: title
+entity_type: node
+bundle: vent
+label: Vent
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

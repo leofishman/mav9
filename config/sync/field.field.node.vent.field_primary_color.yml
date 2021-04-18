@@ -1,0 +1,25 @@
+uuid: 00afef76-c90a-43df-89cd-40374dccdf28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_primary_color
+    - node.type.vent
+  module:
+    - color_field
+id: node.vent.field_primary_color
+field_name: field_primary_color
+entity_type: node
+bundle: vent
+label: 'Primary Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#0051d9'
+    opacity: !!float 1
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

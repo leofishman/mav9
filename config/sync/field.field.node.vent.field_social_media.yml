@@ -1,0 +1,21 @@
+uuid: 82edd6d4-c1fa-4af7-ab49-29558a28882a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_media
+    - node.type.vent
+  module:
+    - social_link_field
+id: node.vent.field_social_media
+field_name: field_social_media
+entity_type: node
+bundle: vent
+label: 'Social Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: social_links

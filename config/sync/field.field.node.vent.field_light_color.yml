@@ -1,0 +1,25 @@
+uuid: 5e2ce041-6de4-42ba-8391-c6ce86ab005c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_light_color
+    - node.type.vent
+  module:
+    - color_field
+id: node.vent.field_light_color
+field_name: field_light_color
+entity_type: node
+bundle: vent
+label: 'Light Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#ffffff'
+    opacity: !!float 1
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type
