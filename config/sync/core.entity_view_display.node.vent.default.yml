@@ -50,28 +50,37 @@ content:
     weight: 106
     label: above
     settings:
-      format: hex
       opacity: true
+      shape: square
+      width: '50'
+      height: '50'
+      data_attribute: false
     third_party_settings: {  }
-    type: color_field_formatter_text
+    type: color_field_formatter_swatch
     region: content
   field_light_color:
     weight: 107
     label: above
     settings:
-      format: hex
       opacity: true
+      shape: square
+      width: '50'
+      height: '50'
+      data_attribute: false
     third_party_settings: {  }
-    type: color_field_formatter_text
+    type: color_field_formatter_swatch
     region: content
   field_primary_color:
     weight: 105
     label: above
     settings:
-      format: hex
       opacity: true
+      shape: square
+      width: '50'
+      height: '50'
+      data_attribute: false
     third_party_settings: {  }
-    type: color_field_formatter_text
+    type: color_field_formatter_swatch
     region: content
   field_social_media:
     weight: 108
