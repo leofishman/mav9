@@ -3711,7 +3711,7 @@
         },
         {
             "name": "pantheon-upstreams/upstream-configuration",
-            "version": "dev-master",
+            "version": "dev-vent-type2",
             "dist": {
                 "type": "path",
                 "url": "upstream-configuration",
