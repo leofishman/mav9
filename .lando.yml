@@ -16,6 +16,10 @@ config:
   # Disable the REDIS cache
   cache: false
 
+services:
+  database:
+    type: mariadb:10.5
+
 tooling:
   drush:
     service: appserver
