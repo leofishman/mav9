@@ -22,3 +22,8 @@ block:
   dependencies:
     - core/jquery
     - core/drupal
+
+mav_jitsi_conference:
+  css:
+    component:
+      css/mav-jitsi-conference-widget.css: {}

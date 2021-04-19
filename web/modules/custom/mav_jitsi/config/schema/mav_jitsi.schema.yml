@@ -11,3 +11,28 @@ mav_jitsi.settings:
     mav_jitsi_window_width:
       type: float
       label: 'Jitsi window width'
+
+# Default value.
+field.value.mav_jitsi_conference:
+  type: mapping
+  label: Default value
+  mapping:
+    jitsi_conf:
+      type: string
+      label: jitsi conf
+# Field widget.
+field.widget.settings.mav_jitsi_conference:
+  type: mapping
+  label: jitsi conf widget settings
+  mapping:
+    domain:
+      type: string
+      label: domain
+# Field formatter.
+field.formatter.settings.mav_jitsi_conference_default:
+  type: mapping
+  label: Example formatter settings
+  mapping:
+    domain:
+      type: string
+      label: domain
