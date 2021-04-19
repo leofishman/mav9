@@ -1,0 +1,5 @@
+mav_jitsi.admin.settings:
+  title: MAV Jitsi settings
+  description: 'Default parameters'
+  route_name: mav_jitsi.settings
+  parent: system.admin_config_system

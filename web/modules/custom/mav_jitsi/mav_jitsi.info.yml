@@ -1,0 +1,7 @@
+name : 'mav_jitsi'
+type: module
+description: 'MakeAVent Jitsi video conferencing integration'
+core: 8.x
+core_version_requirement: ^8 || ^9
+configure: mav_jitsi.settings
+package: 1Mav

@@ -1,0 +1,79 @@
+#meet-start {
+  background-image: linear-gradient(to bottom, #c2f2a0, #64aa10);
+  color: #366868;
+  border-color: #64aa10;
+  max-width: 50px;
+}
+
+#meet-stop {
+  display: none;
+  background-image: linear-gradient(to bottom, #e1d256, #cab50e);
+  border-color: #cab50e;
+  color: #b75915;
+  max-width: 50px;
+}
+
+.jitsi_start_button:before {
+  content: "\f03d";
+  font-family: FontAwesome;
+  font-size: 1.5em;
+}
+
+.room {
+  text-align: center;
+  text-decoration-line: underline;
+  color: rgb(71, 71, 71);
+}
+
+.meet-wrapper {
+  min-height: 600px;
+}
+
+.jitsilayout {
+  display: flex;
+}
+.jitsilayout:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.meet-controls {
+  background: #f0f8ff;
+  padding: 10px;
+  width: 20%;
+  order: 1;
+}
+
+#on-meet-controls {
+  display: none;
+}
+
+.meet-video {
+  order: 2;
+  flex-grow: 2;
+  background-color: #f0f8ff;
+  min-height: 500px;
+}
+.meet-controls .button {
+  margin: 5px 0;
+}
+
+.meet-controls input[type="button"] {
+  font-size: 0.9em;
+}
+
+.meet-controls input {
+  width: 100%;
+  border-width: 0 0 1px 0;
+  border-color: rgb(71, 71, 71);
+  background: whitesmoke;
+  font-size: 0.9em;
+}
+
+.copylink:before {
+  content: "\f0c5";
+  font-family: FontAwesome;
+  font-size: 1em;
+  cursor: copy;
+}

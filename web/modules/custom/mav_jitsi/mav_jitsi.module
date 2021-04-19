@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Contains mav_jitsi.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ek_jitsi_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ek_jitsi module.
+    case 'help.page.ek_jitsi':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Integration of Jitsi video for MakeAVent.') . '</p>';
+      #TODO: Write help for MAV
+      $output .= '<p>' . t('Add a field of type mav_jitsi');
+      $output .= '<p>' . t('Go to <a href="@c">structure -> block layout</a> to enable jitsi block on your site.', ['@c' => '/admin/structure/block']) . '</p>';
+      $output .= '<p>' . t('Go to <a href="@c">configuration</a> to set signal server and other settings.', ['@c' => '/admin/ek_jitsi']) . '</p>';
+      $output .= '<p>' . t('To start meeting with random room name, click on "Start New Meeting". The meeting name can be change after start.') . '</p>';
+      $output .= '<p>' . t('To join a meeting or start with custom name, enter a room name and click "Join".') . '</p>';
+      $output .= '<p>' . t('More info about Jitsi at <a href="@c">jitsi.org</a>.', ['@c' => 'https://jitsi.org/']) . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function mav_jitsi_theme() {
+  return [
+    'jitsi_video' => [
+      'template' => 'jitsivideoblock',
+      'variables' => ['items' => []],
+    ],
+    'jitsi_video_page' => [
+      'template' => 'jitsivideopage',
+      'variables' => [
+        'room' => 0,
+        'user' => '',
+        'link_external' => NULL,
+      ],
+    ],
+    'jitsi_video_page_join' => [
+      'template' => 'jitsivideopagejoin',
+      'variables' => [
+        'room' => 0,
+        'user' => '',
+        'link_external' => NULL,
+      ],
+    ],
+  ];
+}

@@ -1,0 +1,13 @@
+mav_jitsi.settings:
+  type: config_object
+  label: 'Jitsi settings'
+  mapping:
+    mav_jitsi_domain:
+      type: string
+      label: 'Domain Jitsi'
+    mav_jitsi_view:
+      type: string
+      label: 'Full screen'
+    mav_jitsi_window_width:
+      type: float
+      label: 'Jitsi window width'
