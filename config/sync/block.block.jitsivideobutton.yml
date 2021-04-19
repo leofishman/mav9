@@ -1,0 +1,28 @@
+uuid: e2205555-0f75-4205-b6ae-50f03779c465
+langcode: en
+status: true
+dependencies:
+  module:
+    - mav_jitsi
+    - node
+  theme:
+    - bartik
+id: jitsivideobutton
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: jitsi_button_block
+settings:
+  id: jitsi_button_block
+  label: 'Jitsi video button'
+  provider: mav_jitsi
+  label_display: visible
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      vent: vent
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
