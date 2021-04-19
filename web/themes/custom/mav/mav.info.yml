@@ -1,0 +1,31 @@
+name: MakeAVent
+type: theme
+description: 'MakeAVent.com custom theme using Bootstrap 4.'
+core: 9.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - mav/global-styling
+regions:
+  top_header: 'Top Header'
+  alert_banner: 'Alert Banner'
+  header: Header
+  header_mobile: 'Header (Mobile)'
+  top_content: 'Top Content'
+  content: Content
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  hidden: Hidden
+component-libraries:
+  core:
+    paths:
+      - components/00-core
+  component:
+    paths:
+      - components/01-component
+  layout:
+    paths:
+      - components/02-layout
+  bootstrap-icons:
+    paths:
+      - node_modules/bootstrap-icons/icons

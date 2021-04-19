@@ -1,0 +1,22 @@
+uuid: 32381346-9c93-4e18-96ac-21faaf49b3bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: vent_pattern
+label: 'Vent Pattern'
+type: 'canonical_entities:node'
+pattern: 'vent/[node:title]'
+selection_criteria:
+  703dfecb-6833-43ec-be23-8b644ca99659:
+    id: node_type
+    bundles:
+      vent: vent
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 703dfecb-6833-43ec-be23-8b644ca99659
+selection_logic: and
+weight: -5
+relationships: {  }
