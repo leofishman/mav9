@@ -1,0 +1,21 @@
+mav_jitsi.settings:
+  path: '/admin/mav_jitsi'
+  defaults:
+    _title: 'MAV Jitsi settings'
+    _form: '\Drupal\mav_jitsi\Form\Settings'
+  requirements:
+    _permission: 'administer jitsi video'
+
+mav_jitsi.start:
+  path: '/jitsi/start'
+  defaults:
+    _controller: '\Drupal\mav_jitsi\Controller\Video::start'
+  requirements:
+    _permission: 'jitsi video'
+    
+mav_jitsi.join:
+  path: '/jitsi/join/{room}'
+  defaults:
+    _controller: '\Drupal\mav_jitsi\Controller\Video::join'
+  requirements:
+    _permission: 'jitsi video'

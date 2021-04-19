@@ -1,0 +1,22 @@
+<div class='meet-wrapper'>
+    <h1 class='room' id='room'>{{ room }}</h1>
+    <div class='jitsilayout'>
+        <div class="meet-controls">
+            <div class='button' id='meet-start'>{{ 'Start'|trans }}</div>
+            <div class='button' id='meet-stop'>{{ 'Stop'|trans }}</div>
+            <div id='on-meet-controls'>
+                <input type="text" placeholder='{{ user }}' id="staticName">
+                <div class='button' id='set-name'>{{ 'Set name'|trans }}</div>
+                <input type="text" placeholder='{{ 'Room subject'|trans }}' id="staticSubject">
+                <div class='button' id='set-subject'>{{ 'Set subject'|trans }}</div>
+                <input type="password" placeholder='{{ 'Password'|trans }}' id="staticPassword">
+                <div class='button' id='set-password'>{{ 'Set password'|trans }}</div>
+                <!--<div class='button' id='share-screen'>{{ 'Share screen'|trans }}</div>-->
+                {{ link_external }}&nbsp<span title="{{ 'copy'|trans }}" class="copylink"></span>
+            </div>
+            
+        </div> 
+        <div class="meet-video" id='meet'></div>
+    </div>
+</div>
+

@@ -1,0 +1,6 @@
+jitsi video:
+  title: 'Video conference'
+  description: 'Start and join jitsi video conference'
+administer jitsi video:
+  title: 'Administer Jitsi video'
+  description: 'Administer Jitsi video settings'  

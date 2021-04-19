@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the ek_jitsi module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function mav_jitsi_uninstall() {
+
+  $configs = [
+    'mav_jitsi.settings',
+  ];
+
+  foreach ($configs as $config) {
+    // Deleting config.
+    \Drupal::configFactory()->getEditable($config)->delete();
+  }
+
+  \Drupal::cache('data')->deleteAll();
+}
+
+/**
+ * Changed permission, rebuild route and cache.
+ */
+function mav_jitsi_update_8001() {
+  \Drupal::service('router.builder')->rebuild();
+  \Drupal::cache('data')->deleteAll();
+}
