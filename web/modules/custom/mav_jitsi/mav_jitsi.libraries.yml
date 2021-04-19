@@ -1,0 +1,24 @@
+video:
+  version: 1
+  js:
+    //meet-app.makeavent.com/external_api.js: { type: external  }
+    js/jitsi.js: {}
+    
+  css:
+    theme:
+      css/meet.css: {}  
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    
+block:
+  version: 1
+  js:
+    js/jitsiblock.js: {weight: -1}
+  css:
+    theme:
+      css/meet.css: {} 
+  dependencies:
+    - core/jquery
+    - core/drupal
