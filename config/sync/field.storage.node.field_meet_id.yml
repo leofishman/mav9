@@ -1,0 +1,19 @@
+uuid: e9c579a8-f8a7-45c6-9a85-349cfbec3847
+langcode: en
+status: true
+dependencies:
+  module:
+    - mav_jitsi
+    - node
+id: node.field_meet_id
+field_name: field_meet_id
+entity_type: node
+type: mav_jitsi_conference
+settings: {  }
+module: mav_jitsi
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

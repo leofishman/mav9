@@ -1,0 +1,21 @@
+uuid: 4f8e3424-0571-4d24-a179-f5c4c56adae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meet_id
+    - node.type.vent
+  module:
+    - mav_jitsi
+id: node.vent.field_meet_id
+field_name: field_meet_id
+entity_type: node
+bundle: vent
+label: 'meet ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: mav_jitsi_conference
