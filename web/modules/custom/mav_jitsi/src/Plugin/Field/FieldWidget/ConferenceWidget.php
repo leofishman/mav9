@@ -2,6 +2,7 @@
 
 namespace Drupal\mav_jitsi\Plugin\Field\FieldWidget;
 
+
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -55,7 +56,7 @@ class ConferenceWidget extends WidgetBase {
     $element['jitsi_conf'] = [
       '#type' => 'textfield',
       '#title' => $this->t('jitsi conf'),
-      '#default_value' => isset($items[$delta]->jitsi_conf) ? $items[$delta]->jitsi_conf : NULL,
+      '#default_value' => isset($items[$delta]->jitsi_conf) ? $items[$delta]->jitsi_conf : $this->fieldDefinition->getUniqueIdentifier(),
       '#size' => 20,
     ];
 
@@ -74,17 +75,4 @@ class ConferenceWidget extends WidgetBase {
   public function errorElement(array $element, ConstraintViolationInterface $violation, array $form, FormStateInterface $form_state) {
     return isset($violation->arrayPropertyPath[0]) ? $element[$violation->arrayPropertyPath[0]] : $element;
   }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function massageFormValues(array $values, array $form, FormStateInterface $form_state) {
-    foreach ($values as $delta => $value) {
-      if ($value['jitsi_conf'] === '') {
-        $values[$delta]['jitsi_conf'] = NULL;
-      }
-    }
-    return $values;
-  }
-
 }
