@@ -43,10 +43,10 @@
                         NATIVE_APP_NAME: 'Mav',
                         PROVIDER_NAME: 'mav',
                         LANG_DETECTION: true,
-                        INVITATION_POWERED_BY: true,
+                        INVITATION_POWERED_BY: false,
                         AUTHENTICATION_ENABLE: true,
                         TOOLBAR_BUTTONS: [
-                            'fullscreen', 'raisehand', 'chat'
+                            'fullscreen',
                         ],
                         SETTINGS_SECTIONS: [ 'devices', 'language', 'moderator', 'profile', 'calendar' ],
                         VIDEO_LAYOUT_FIT: 'both',
@@ -85,16 +85,17 @@
                         DISABLE_JOIN_LEAVE_NOTIFICATIONS: true,
                         SHOW_CHROME_EXTENSION_BANNER: false,
                         HIDE_KICK_BUTTON_FOR_GUESTS: true,
+                        TOOLBAR_BUTTONS: ['microphone', 'camera', 'tileview'],
                     },
                     configOverwrite: {
-                        hosts: {
+                      /*  hosts: {
                             domain: 'meet-app.makeavent.com',
                             muc: 'conference.meet-app.makeavent.com'
                         },
 
                         bosh: '//meet-app.makeavent.com/http-bind',
                         websocket: 'wss://meet-app.makeavent.com/xmpp-websocket',
-
+*/
                         clientNode: 'http://jitsi.org/jitsimeet',
                         testing: {
                             enableFirefoxSimulcast: false,
@@ -106,7 +107,7 @@
                         useNicks: false,
 
                         userInfo: {
-                            displayName: this.username
+                            displayName: this.username ? this.username : 'guest',
                         },
                       disableRemoteMute: false,
                         remoteVideoMenu: {
@@ -158,7 +159,7 @@
                         // Default value for the channel "last N" attribute. -1 for unlimited.
                         channelLastN: -1,
                         requireDisplayName: false,
-                        enableWelcomePage: true,
+                        enableWelcomePage: false,
 
                         // Enabling the close page will ignore the welcome page redirection when
                         // a call is hangup.
@@ -372,6 +373,9 @@
                         nick: false,
                         startBitrate: false,
 
+
+                        prejoinPageEnabled: false,
+
                         makeJsonParserHappy: 'even if last key had a trailing comma',
                     },
 
@@ -422,8 +426,19 @@
                          email: settings.mav_jitsi.email,
                          displayName: settings.mav_jitsi.user,
                      },
-                     interfaceConfigOverwrite: {enableClosePage: true},
-
+                     interfaceConfigOverwrite: {
+                       enableClosePage: true,
+                       TOOLBAR_ALWAYS_VISIBLE: false,
+                       DEFAULT_REMOTE_DISPLAY_NAME: '',
+                       SHOW_JITSI_WATERMARK: false,
+                       JITSI_WATERMARK_LINK: 'https://www.makeavent.com',
+                       TOOLBAR_BUTTONS: [
+                            'fullscreen',
+                        ],
+                     },
+                    configOverwrite: {
+                       prejoinPageEnabled: false,
+                    },
                  };
 
                  api = new JitsiMeetExternalAPI(videodomain, options);
@@ -455,6 +470,8 @@
 
                  $('#meet-stop').show();
                  $('#meet-start').hide();
+                 //$('#videospace .premeeting-screen .content .copy-meeting').hide();
+                 $('.watermark').hide();
                  $('#on-meet-controls').show(500);
 
             });
