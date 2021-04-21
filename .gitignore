@@ -130,3 +130,11 @@ upstream/web/
 
 # Ignore .env files as they are personal
 #/.env
+
+# Ignore file logs and other vendor files
+logs
+/web/themes/custom/mav/node_modules
+console
+/.editorconfig
+/.gitattributes
+db_dumps/
