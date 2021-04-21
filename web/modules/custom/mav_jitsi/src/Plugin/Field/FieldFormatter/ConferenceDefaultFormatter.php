@@ -168,7 +168,9 @@ class ConferenceDefaultFormatter extends FormatterBase {
       $theme = theme_get_setting('logo');
       $picture = \Drupal::request()->getSchemeAndHttpHost() . $theme['url'];
     }
-    $url = Url::fromUri('https://' . $domain . '/' . $room, ['attributes' => ['id' => 'roomlink', 'title' => $this->t('Right click to copy')]]);
+
+    $url = Url::fromRoute('<current>');
+    //$url = Url::fromUri('https://' . $domain . '/' . $room, ['attributes' => ['id' => 'roomlink', 'title' => $this->t('Right click to copy')]]);
     $content = [
       '#theme' => 'jitsi_video_page_join',
       '#room' => $roomName,
