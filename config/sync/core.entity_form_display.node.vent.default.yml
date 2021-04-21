@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.vent.field_company_name
     - field.field.node.vent.field_dark_color
     - field.field.node.vent.field_light_color
+    - field.field.node.vent.field_meet_id
     - field.field.node.vent.field_primary_color
     - field.field.node.vent.field_social_media
     - field.field.node.vent.field_vent_files
@@ -15,6 +16,7 @@ dependencies:
   module:
     - color_field
     - link
+    - mav_jitsi
     - path
     - social_link_field
     - text
@@ -66,6 +68,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
+    region: content
+  field_meet_id:
+    weight: 129
+    settings:
+      domain: meet.jit.si
+    third_party_settings: {  }
+    type: mav_jitsi_conference
     region: content
   field_primary_color:
     weight: 125

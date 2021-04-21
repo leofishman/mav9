@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.vent.field_company_name
     - field.field.node.vent.field_dark_color
     - field.field.node.vent.field_light_color
+    - field.field.node.vent.field_meet_id
     - field.field.node.vent.field_primary_color
     - field.field.node.vent.field_social_media
     - field.field.node.vent.field_vent_files
@@ -39,6 +40,7 @@ hidden:
   field_company_name: true
   field_dark_color: true
   field_light_color: true
+  field_meet_id: true
   field_primary_color: true
   field_social_media: true
   field_vent_files: true
