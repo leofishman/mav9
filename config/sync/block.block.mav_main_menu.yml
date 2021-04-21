@@ -1,19 +1,19 @@
-uuid: ac9d16ae-bd30-438c-ae31-81b81ac231d9
+uuid: f379c38b-f503-4628-817d-597fdad85feb
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
   module:
     - system
   theme:
-    - bartik
+    - mav
 _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
-id: bartik_main_menu
-theme: bartik
-region: primary_menu
-weight: 0
+id: mav_main_menu
+theme: mav
+region: hidden
+weight: -3
 provider: null
 plugin: 'system_menu_block:main'
 settings:

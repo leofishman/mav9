@@ -1,4 +1,4 @@
-uuid: e2205555-0f75-4205-b6ae-50f03779c465
+uuid: 9bae3e0c-8e73-402d-a9f7-044d04bc4bcd
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,9 @@ dependencies:
     - mav_jitsi
     - node
   theme:
-    - bartik
-id: jitsivideobutton
-theme: bartik
+    - mav
+id: mav_jitsivideobutton
+theme: mav
 region: content
 weight: 0
 provider: null

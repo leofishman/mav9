@@ -19,9 +19,24 @@ config:
 services:
   database:
     type: mariadb:10.5
+    portforward: 32825
+  appserver:
+    run_as_root:
+      - apt-get update
+      - curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
+      - apt-get install -y nodejs
+      - npm install -g gulp-cli gulp sass
 
 tooling:
   drush:
     service: appserver
     env:
       DRUSH_OPTIONS_URI: "https://mav9.lndo.site"
+  npm:
+    service: appserver
+  node:
+    service: appserver
+  gulp:
+    service: appserver
+  sass:
+    service: appserver

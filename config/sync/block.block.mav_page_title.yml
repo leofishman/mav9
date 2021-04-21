@@ -1,13 +1,13 @@
-uuid: bfd89226-4af2-4a8e-8da8-39548123b793
+uuid: 5196c26a-d5df-4b74-ac8b-0de5d52fc2fa
 langcode: en
 status: true
 dependencies:
   theme:
-    - bartik
+    - mav
 _core:
   default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
-id: bartik_page_title
-theme: bartik
+id: mav_page_title
+theme: mav
 region: content
 weight: -50
 provider: null
