@@ -8,13 +8,16 @@ dependencies:
     - field.field.node.vent.field_company_name
     - field.field.node.vent.field_dark_color
     - field.field.node.vent.field_light_color
+    - field.field.node.vent.field_logo_vent
     - field.field.node.vent.field_meet_id
     - field.field.node.vent.field_primary_color
     - field.field.node.vent.field_social_media
+    - field.field.node.vent.field_vent_background
     - field.field.node.vent.field_vent_files
     - node.type.vent
   module:
     - color_field
+    - image
     - link
     - mav_jitsi
     - social_link_field
@@ -28,12 +31,12 @@ content:
   body:
     label: above
     type: text_default
-    weight: 101
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
   field_company_description:
-    weight: 103
+    weight: 6
     label: above
     settings:
       link_to_entity: false
@@ -41,7 +44,7 @@ content:
     type: string
     region: content
   field_company_name:
-    weight: 102
+    weight: 5
     label: above
     settings:
       link_to_entity: false
@@ -49,7 +52,7 @@ content:
     type: string
     region: content
   field_dark_color:
-    weight: 106
+    weight: 9
     label: above
     settings:
       opacity: true
@@ -61,7 +64,7 @@ content:
     type: color_field_formatter_swatch
     region: content
   field_light_color:
-    weight: 107
+    weight: 10
     label: above
     settings:
       opacity: true
@@ -72,16 +75,25 @@ content:
     third_party_settings: {  }
     type: color_field_formatter_swatch
     region: content
-  field_meet_id:
-    weight: 109
+  field_logo_vent:
+    weight: 1
     label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_meet_id:
+    weight: 2
+    label: hidden
     settings:
       domain: meet.jit.si
     third_party_settings: {  }
     type: mav_jitsi_conference_default
     region: content
   field_primary_color:
-    weight: 105
+    weight: 8
     label: above
     settings:
       opacity: true
@@ -93,7 +105,7 @@ content:
     type: color_field_formatter_swatch
     region: content
   field_social_media:
-    weight: 108
+    weight: 3
     label: above
     settings:
       icon_type: common
@@ -102,8 +114,17 @@ content:
     third_party_settings: {  }
     type: font_awesome
     region: content
+  field_vent_background:
+    weight: 11
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_vent_files:
-    weight: 104
+    weight: 7
     label: above
     settings:
       trim_length: 80
@@ -115,7 +136,7 @@ content:
     type: link
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

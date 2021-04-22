@@ -1,5 +1,5 @@
 mav_jitsi_domain: meet.jit.si
-mav_jitsi_view: full
-mav_jitsi_window_width: 800
+mav_jitsi_view: framed
+mav_jitsi_window_width: !!float 800
 _core:
   default_config_hash: Illz8yv7teZx1KyX3h5H0U-FH2y2d9dq9mVGkoRYVyk
