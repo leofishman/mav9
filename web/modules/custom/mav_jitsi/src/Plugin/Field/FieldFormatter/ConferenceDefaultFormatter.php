@@ -56,8 +56,11 @@ class ConferenceDefaultFormatter extends FormatterBase {
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $element = [];
-    $domain = \Drupal::config('mav_jitsi.settings')->get('mav_jitsi_domain') ?
+/*    $domain = \Drupal::config('mav_jitsi.settings')->get('mav_jitsi_domain') ?
       \Drupal::config('mav_jitsi.settings')->get('mav_jitsi_domain') : 'meet.jit.si';
+ */
+    $settings = $this->getSettings();
+    $domain = $settings['domain'];
     foreach ($items as $delta => $item) {
       if ($item->jitsi_conf) {
         $element[$delta]['jitsi_conf'] = $this->join($item->jitsi_conf);
@@ -157,8 +160,9 @@ class ConferenceDefaultFormatter extends FormatterBase {
       }
     }
     $content = [];
-    $domain = \Drupal::config('mav_jitsi.settings')->get('mav_jitsi_domain') ?
-      \Drupal::config('mav_jitsi.settings')->get('mav_jitsi_domain') : 'meet.jit.si';    $user = User::load(\Drupal::currentUser()->id());
+    $settings = $this->getSettings();
+    $domain = $settings['domain'];
+    $user = User::load(\Drupal::currentUser()->id());
     $username = $user->getAccountName();
     $mail = $user->getEmail();
     if ($user->get('user_picture')->entity) {

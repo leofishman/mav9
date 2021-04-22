@@ -429,11 +429,12 @@
                      interfaceConfigOverwrite: {
                        enableClosePage: true,
                        TOOLBAR_ALWAYS_VISIBLE: false,
-                       DEFAULT_REMOTE_DISPLAY_NAME: '',
+                       DEFAULT_REMOTE_DISPLAY_NAME: 'Demo_vent_user',
                        SHOW_JITSI_WATERMARK: false,
                        JITSI_WATERMARK_LINK: 'https://www.makeavent.com',
                        TOOLBAR_BUTTONS: [
-                            'fullscreen',
+                           'mute-everyone', 'fullscreen', 'chat',
+                           'microphone', 'camera', 'desktop'
                         ],
                      },
                     configOverwrite: {
@@ -473,6 +474,13 @@
                  //$('#videospace .premeeting-screen .content .copy-meeting').hide();
                  $('.watermark').hide();
                  $('#on-meet-controls').show(500);
+                 api.executeCommand('subject', 'Demo Vent');
+                var numberOfParticipants = api.getNumberOfParticipants();
+                console.log(11111, numberOfParticipants);
+//TODO: Calculate number of participants
+                 if (options.userInfo.displayName.length < 1) {
+                     api.executeComand('DisplayName', 'guest user' )
+                 }
 
             });
 
