@@ -1,17 +1,17 @@
-uuid: e3f1b4f7-9f0d-4204-976f-8b4acc0e43b5
+uuid: 8491c0e9-cee2-4bd8-a657-2ba25f9573f5
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - mav
 _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
-id: bartik_branding
-theme: bartik
-region: header
-weight: 0
+id: mav_branding
+theme: mav
+region: hidden
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:

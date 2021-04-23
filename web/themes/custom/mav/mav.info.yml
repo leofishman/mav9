@@ -1,0 +1,30 @@
+name: MakeAVent
+type: theme
+base theme: stable
+description: 'MakeAVent.com custom theme using Bootstrap 4.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - mav/global-styling
+regions:
+  header: 'Header'
+  sidebar_left: 'Sidebar Right - Company Data'
+  top_content: 'Top Content'
+  content: 'Content'
+  conference_data: 'Conference Data'
+  participants: 'Participants'
+  sidebar_right: 'Sidebar Right - Chat'
+  hidden: 'Hidden'
+component-libraries:
+  core:
+    paths:
+      - components/00-core
+  component:
+    paths:
+      - components/01-component
+  layout:
+    paths:
+      - components/02-layout
+  bootstrap-icons:
+    paths:
+      - node_modules/bootstrap-icons/icons

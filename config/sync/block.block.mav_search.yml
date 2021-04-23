@@ -1,17 +1,17 @@
-uuid: 98ca11a8-55c3-4383-b793-d9b25ab9b578
+uuid: 3804c444-1fff-42f2-bc04-5e99178a838d
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
   theme:
-    - bartik
+    - mav
 _core:
   default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
-id: bartik_search
-theme: bartik
-region: sidebar_first
-weight: -1
+id: mav_search
+theme: mav
+region: hidden
+weight: -6
 provider: null
 plugin: search_form_block
 settings:

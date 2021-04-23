@@ -1,17 +1,17 @@
-uuid: 8239206f-5926-4e38-a7e6-ee0c41afb710
+uuid: 2c59d7c1-3931-4cc8-b90a-0b0af484a25a
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - mav
 _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
-id: bartik_messages
-theme: bartik
-region: highlighted
-weight: 0
+id: mav_messages
+theme: mav
+region: hidden
+weight: -2
 provider: null
 plugin: system_messages_block
 settings:

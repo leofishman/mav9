@@ -8,15 +8,18 @@ dependencies:
     - field.field.node.vent.field_company_name
     - field.field.node.vent.field_dark_color
     - field.field.node.vent.field_light_color
+    - field.field.node.vent.field_logo_vent
     - field.field.node.vent.field_meet_id
     - field.field.node.vent.field_primary_color
     - field.field.node.vent.field_social_media
+    - field.field.node.vent.field_vent_background
     - field.field.node.vent.field_vent_files
+    - image.style.thumbnail
     - node.type.vent
   module:
     - color_field
+    - image
     - link
-    - mav_jitsi
     - path
     - social_link_field
     - text
@@ -27,7 +30,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 121
+    weight: 9
     settings:
       rows: 9
       summary_rows: 3
@@ -37,12 +40,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_company_description:
-    weight: 123
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -50,7 +53,7 @@ content:
     type: string_textfield
     region: content
   field_company_name:
-    weight: 122
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -58,40 +61,49 @@ content:
     type: string_textfield
     region: content
   field_dark_color:
-    weight: 126
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_light_color:
-    weight: 127
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
-  field_meet_id:
-    weight: 129
+  field_logo_vent:
+    weight: 0
     settings:
-      domain: meet.jit.si
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: mav_jitsi_conference
+    type: image_image
     region: content
   field_primary_color:
-    weight: 125
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_social_media:
-    weight: 128
+    weight: 8
     settings:
       select_social: false
       disable_weight: false
     third_party_settings: {  }
     type: social_links
     region: content
+  field_vent_background:
+    weight: 16
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_vent_files:
-    weight: 124
+    weight: 13
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -100,7 +112,7 @@ content:
     region: content
   path:
     type: path
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -108,26 +120,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 7
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 1
     region: content
     settings:
       size: 60
@@ -135,7 +147,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -143,4 +155,5 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_meet_id: true

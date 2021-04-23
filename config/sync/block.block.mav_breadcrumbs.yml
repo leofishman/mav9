@@ -1,17 +1,17 @@
-uuid: 3076867c-dd8d-4e34-9bd4-78b6abe57af8
+uuid: a98fc579-d15c-497e-a6b0-6782c55de1d7
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - mav
 _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
-id: bartik_breadcrumbs
-theme: bartik
-region: breadcrumb
-weight: 0
+id: mav_breadcrumbs
+theme: mav
+region: hidden
+weight: -5
 provider: null
 plugin: system_breadcrumb_block
 settings:
