@@ -45,9 +45,6 @@
                         LANG_DETECTION: true,
                         INVITATION_POWERED_BY: false,
                         AUTHENTICATION_ENABLE: true,
-                        TOOLBAR_BUTTONS: [
-                            'fullscreen',
-                        ],
                         SETTINGS_SECTIONS: [ 'devices', 'language', 'moderator', 'profile', 'calendar' ],
                         VIDEO_LAYOUT_FIT: 'both',
 
@@ -528,11 +525,12 @@
             }
 
             $(".copylink").click(function () {
-                var text = $('#roomlink').attr('href');
+                var text = $('#roomlink');
+                var roomlink = $(text[0]).find('a').attr('href');
                 $body = document.getElementsByTagName('body')[0];
                 var $tempInput = document.createElement('INPUT');
                 $body.appendChild($tempInput);
-                $tempInput.setAttribute('value', text)
+                $tempInput.setAttribute('value', roomlink)
                 $tempInput.select();
                 document.execCommand('copy');
                 $body.removeChild($tempInput);
