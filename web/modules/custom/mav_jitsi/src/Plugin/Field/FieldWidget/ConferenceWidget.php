@@ -56,7 +56,7 @@ class ConferenceWidget extends WidgetBase {
     $element['jitsi_conf'] = [
       '#type' => 'textfield',
       '#title' => $this->t('jitsi conf'),
-      '#default_value' => isset($items[$delta]->jitsi_conf) ? $items[$delta]->jitsi_conf : $this->fieldDefinition->getUniqueIdentifier(),
+      '#default_value' => isset($items[$delta]->jitsi_conf) ? $items[$delta]->jitsi_conf : str_replace('-','',$this->fieldDefinition->getUniqueIdentifier()),
       '#size' => 20,
     ];
 
