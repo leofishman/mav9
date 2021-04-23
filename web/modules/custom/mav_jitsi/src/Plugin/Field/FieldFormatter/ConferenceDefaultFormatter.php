@@ -159,7 +159,6 @@ class ConferenceDefaultFormatter extends FormatterBase {
         }
       }
     }
-    $content = [];
     $settings = $this->getSettings();
     $domain = $settings['domain'];
     $user = User::load(\Drupal::currentUser()->id());
@@ -173,7 +172,7 @@ class ConferenceDefaultFormatter extends FormatterBase {
       $picture = \Drupal::request()->getSchemeAndHttpHost() . $theme['url'];
     }
 
-    $url = Url::fromRoute('<current>');
+    $url = Url::fromRoute('<current>', [], ['absolute' => TRUE]);
     //$url = Url::fromUri('https://' . $domain . '/' . $room, ['attributes' => ['id' => 'roomlink', 'title' => $this->t('Right click to copy')]]);
     $content = [
       '#theme' => 'jitsi_video_page_join',

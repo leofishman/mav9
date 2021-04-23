@@ -1,7 +1,7 @@
 video:
   version: 1
   js:
-    //meet-app.makeavent.com/external_api.js: { type: external  }
+    //meet.jit.si/external_api.js: { type: external  }
     js/jitsi.js: {}
     
   css:
