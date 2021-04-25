@@ -15,7 +15,9 @@ label: 'meet ID'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    jitsi_conf: 4f8e342405714d24a179f5c4c56adae9
 default_value_callback: ''
 settings: {  }
 field_type: mav_jitsi_conference

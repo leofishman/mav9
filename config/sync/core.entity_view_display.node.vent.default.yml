@@ -8,16 +8,15 @@ dependencies:
     - field.field.node.vent.field_company_name
     - field.field.node.vent.field_dark_color
     - field.field.node.vent.field_light_color
-    - field.field.node.vent.field_logo_vent
     - field.field.node.vent.field_meet_id
     - field.field.node.vent.field_primary_color
     - field.field.node.vent.field_social_media
     - field.field.node.vent.field_vent_background
     - field.field.node.vent.field_vent_files
+    - field.field.node.vent.field_vent_logo
     - node.type.vent
   module:
     - color_field
-    - image
     - link
     - mav_jitsi
     - social_link_field
@@ -29,7 +28,7 @@ bundle: vent
 mode: default
 content:
   body:
-    label: above
+    label: hidden
     type: text_default
     weight: 4
     settings: {  }
@@ -37,7 +36,7 @@ content:
     region: content
   field_company_description:
     weight: 6
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -45,7 +44,7 @@ content:
     region: content
   field_company_name:
     weight: 5
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -53,7 +52,7 @@ content:
     region: content
   field_dark_color:
     weight: 9
-    label: above
+    label: hidden
     settings:
       opacity: true
       shape: square
@@ -65,7 +64,7 @@ content:
     region: content
   field_light_color:
     weight: 10
-    label: above
+    label: hidden
     settings:
       opacity: true
       shape: square
@@ -74,15 +73,6 @@ content:
       data_attribute: false
     third_party_settings: {  }
     type: color_field_formatter_swatch
-    region: content
-  field_logo_vent:
-    weight: 1
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
     region: content
   field_meet_id:
     weight: 2
@@ -94,7 +84,7 @@ content:
     region: content
   field_primary_color:
     weight: 8
-    label: above
+    label: hidden
     settings:
       opacity: true
       shape: square
@@ -106,7 +96,7 @@ content:
     region: content
   field_social_media:
     weight: 3
-    label: above
+    label: hidden
     settings:
       icon_type: common
       orientation: vertical
@@ -115,17 +105,17 @@ content:
     type: font_awesome
     region: content
   field_vent_background:
+    type: entity_reference_entity_view
     weight: 11
-    label: above
+    label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      view_mode: full
+      link: false
     third_party_settings: {  }
-    type: image
     region: content
   field_vent_files:
     weight: 7
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -134,6 +124,15 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_vent_logo:
+    type: entity_reference_entity_view
+    weight: 12
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
     region: content
   links:
     weight: 0

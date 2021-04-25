@@ -8,17 +8,15 @@ dependencies:
     - field.field.node.vent.field_company_name
     - field.field.node.vent.field_dark_color
     - field.field.node.vent.field_light_color
-    - field.field.node.vent.field_logo_vent
     - field.field.node.vent.field_meet_id
     - field.field.node.vent.field_primary_color
     - field.field.node.vent.field_social_media
     - field.field.node.vent.field_vent_background
     - field.field.node.vent.field_vent_files
-    - image.style.thumbnail
+    - field.field.node.vent.field_vent_logo
     - node.type.vent
   module:
     - color_field
-    - image
     - link
     - path
     - social_link_field
@@ -72,14 +70,6 @@ content:
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
-  field_logo_vent:
-    weight: 0
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_primary_color:
     weight: 12
     settings: {  }
@@ -95,12 +85,14 @@ content:
     type: social_links
     region: content
   field_vent_background:
-    weight: 16
+    weight: 26
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: image_image
+    type: entity_reference_autocomplete
     region: content
   field_vent_files:
     weight: 13
@@ -109,6 +101,16 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_vent_logo:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   path:
     type: path

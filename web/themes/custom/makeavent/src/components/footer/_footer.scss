@@ -1,0 +1,136 @@
+.footer {
+  margin-top: 4rem;
+  background-color: $footer-bg;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .copyright-block {
+    color: $white;
+    font-size: $font-size-sm;
+  }
+}
+
+.footer__item {
+  @include media-breakpoint-up(md) {
+    border-right: 1px solid $border-color;
+  }
+
+  &:first-child {
+    @include media-breakpoint-up(lg) {
+      border-right: 1px solid $border-color;
+    }
+
+    border-right: 0;
+  }
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.footer__branding {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer__branding-link {
+  @include media-breakpoint-up(md) {
+    margin-right: 1rem;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  display: block;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: $white;
+
+  &:first-child {
+    margin-right: 2rem;
+    width: 100px;
+  }
+}
+
+.footer__branding-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+// Main Footer Menu
+.footer__menu {
+  @include media-breakpoint-up(lg) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.footer__menu-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__menu-item {
+  margin-bottom: 0.25rem;
+}
+
+.footer__menu-link {
+  color: $white;
+
+  &:focus,
+  &:hover {
+    color: $white;
+  }
+}
+
+// Secondary Footer Menu
+.footer__menu--secondary {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
+
+  margin-bottom: 1.5rem;
+  font-size: $font-size-sm;
+}
+
+.footer__menu-items--secondary {
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+  }
+
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__menu-item--secondary {
+  @include media-breakpoint-up(sm) {
+    &:last-child {
+      &:after {
+        content: '';
+      }
+    }
+
+    &:after {
+      margin-right: 5px;
+      margin-left: 5px;
+      color: $border-color;
+      content: '/';
+    }
+
+    margin-top: 0;
+  }
+
+  margin-top: 7px;
+}
+
+.footer__menu-link--secondary {
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}

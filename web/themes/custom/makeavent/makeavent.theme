@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the makeavent theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function makeavent_preprocess_html(array &$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_page() for page.html.twig.
+ */
+function makeavent_preprocess_page(array &$variables) {
+
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function makeavent_preprocess_form(array &$variables) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function makeavent_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Page Template Suggestions for Content Types.
+  $route_match = \Drupal::routeMatch();
+
+  // Skip custom template suggestions for the home page.
+  $node = $route_match->getParameter('node');
+  if (!empty($node) && ($route_match->getRouteName() === 'entity.node.canonical') && $node->get('title')->getString() !== 'Home Page') {
+    $suggestions = _makeavent_insert_suggestion_after($suggestions, 'page__node', $node->bundle());
+  }
+}
+
+/**
+ * Insert a suggestion after a given value.
+ *
+ * Instead of adding the value as the last one, this method allows to add
+ * suggestion in a specific order.
+ *
+ * @param array $suggestions
+ *   The original suggestions array.
+ * @param string $suggestion_value
+ *   The suggestion value to insert the given value after this one.
+ * @param string $bundle
+ *   The node bundle.
+ *
+ * @return array
+ *   The new suggestions array.
+ */
+function _makeavent_insert_suggestion_after(array $suggestions, string $suggestion_value, string $bundle) :array {
+  $new_suggestions = [];
+  foreach ($suggestions as $suggestion) {
+    $new_suggestions[] = $suggestion;
+    if ($suggestion_value === $suggestion) {
+      $new_suggestions[] = 'page__node__' . $bundle;
+    }
+  }
+
+  return $new_suggestions;
+}

@@ -9,7 +9,6 @@ use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\user\Entity\User;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Drupal\Core\Render\BareHtmlPageRenderer;
 
 /**
  * Plugin implementation of the 'mav_jitsi_conference_default' formatter.
@@ -77,7 +76,6 @@ class ConferenceDefaultFormatter extends FormatterBase {
     }
     return $element;
   }
-
 
   /**
    * Function to Start video Call.

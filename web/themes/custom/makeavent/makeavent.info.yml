@@ -1,0 +1,69 @@
+name: Make a Vent Theme
+type: theme
+description: MakeAVent.com custom theme.
+package: Other
+core: 8.x
+core_version_requirement: ^8 || ^9
+# Classy vs. Stable as a base theme: https://www.lullabot.com/articles/a-tale-of-two-base-themes-in-drupal-8-core
+base theme: stable
+
+# This section controls the libraries for your theme. For full documentation,
+# see https://www.drupal.org/node/2216195
+
+# The "libraries-override:" section will allow you to:
+# - Replace an entire library.
+# - Remove an entire library.
+# - Replace an asset in a library with another asset.
+# - Remove an asset from a library.
+#libraries-override:
+#  system/base:
+#    css:
+#      component:
+#        # Replace one file with another.
+#        /core/themes/stable/css/system/components/hidden.module.css: dist/css/hidden.css
+
+# The "libraries-extend:" section will allow you to add your own JS or CSS to
+# existing libraries.
+# libraries-extend:
+
+# The "libraries:" section will add a library to _all_ pages.
+  #libraries:
+  #  - mav_mc/global
+  # Example adding the webfonts library to every page.
+  # See mav_mc.libraries.yml for more info.
+  #- mav_mc/webfonts
+libraries:
+  - makeavent/global-css
+  - makeavent/global-js
+
+# This section is used by the contrib module, Component Libraries. It allows you
+# to reference .twig files in your sass/ directory by using the Twig namespace:
+# @mav_mc
+# See https://www.drupal.org/project/components for more information.
+component-libraries:
+  component:
+    paths:
+      - src/components
+  layout:
+    paths:
+      - src/layout
+#  makeavent:
+#    paths:
+#      - src/global
+#      - src/components
+#      - src/pages
+#      - src/templates
+
+# This section lists the regions defined in the theme (our base theme) default
+# page.html.twig and maintenance-page.html.twig files. The name before
+# the semi-colon is the machine name of the region. The text after the
+# semi-colon is the region's description used on the admin/structure/block page.
+regions:
+  header: 'Header'
+  sidebar_left: 'Sidebar Right - Company Data'
+  top_content: 'Top Content'
+  content: 'Content'
+  conference_data: 'Conference Data'
+  participants: 'Participants'
+  sidebar_right: 'Sidebar Right - Chat'
+  hidden: 'Hidden'

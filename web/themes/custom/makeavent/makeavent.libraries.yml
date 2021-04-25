@@ -1,0 +1,43 @@
+global-css:
+  css:
+    # The SMACSS category, "base", is loaded before other categories. Drupal 8
+    # loads stylesheets based on the SMACSS ordering of:
+    # base, layout, component, state, theme
+    base:
+      dist/css/global.css: {}
+    layout:
+      /libraries/bootstrap/bootstrap.min.css: { minified: true }
+
+global-js:
+  js:
+    /libraries/bootstrap/bootstrap.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+# Example external library.
+# webfonts:
+#   version: 1.x
+#   js:
+#     https://fast.fonts.net/example.js: { type: external, attributes: { async: true }}
+
+# Attach each library by using attach_library() within the components twig template.
+# More info: https://www.drupal.org/node/2456753
+
+# Example component library.
+# site-logo:
+#   css:
+#     component:
+#       dist/css/site-logo.css: {}
+#   # If this library had JavaScript you could specify it like this:
+#   js:
+#     js/script.js: {}
+#   # If this library had dependencies on other libraries, you could specify it like this:
+#   dependencies:
+#     - mav_mc/clearfix
+#     - mav_mc/visually-hidden
+
+#stylesheets-remove:
+#  - core/assets/vendor/normalize-css/normalize.css
+#  - core/modules/system/css/system.module.css
+#  - core/modules/system/css/system.theme.css
+#  - core/modules/views/css/views.module.css

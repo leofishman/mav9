@@ -1,0 +1,29 @@
+uuid: 105ff54e-634f-4037-a643-7a25d3e89dc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+  theme:
+    - makeavent
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: makeavent_page_title
+theme: makeavent
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      vent: vent
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

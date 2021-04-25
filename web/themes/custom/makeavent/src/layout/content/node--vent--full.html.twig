@@ -1,0 +1,45 @@
+{#{{ devel_breakpoint() }}#}
+{#{{ dd(content.field_vent_background) }}#}
+
+{% set background_image = file_url(content.field_vent_background[0]['#media'].field_media_image.entity.uri.value) %}
+
+<article{{ attributes }} style="background-image:url({{ background_image }});">
+  {{ title_prefix }}
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes }}>
+    <div class="row p-1 p-md-4 p-lg-5">
+      <div class="col-3 col-lg-4 mt-1">
+        <span class="text-center">
+          {{ content.field_vent_logo }}
+          <h3{{ attributes }}>{{ label }}</h3>
+        </span>
+        <div class="mt-3 p-2">
+          {{ content.field_social_media }}
+          {{ content.body }}
+          {{ content.field_vent_files }}
+        </div>
+      </div>
+      <div class="col-9 col-lg-8">
+        {{ content.field_meet_id }}
+        {{ content.field_company_name }}
+        {{ content.field_company_description }}
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,41 @@
+{% set text = 'This the Header Twig Component' %}
+{{- text -}}
+
+{#<header class="header" role="banner" aria-label="{{ 'Site Header'|t }}">#}
+{#  {% if page.top_header %}#}
+{#    <div class="header__top">{{ page.top_header }}</div>#}
+{#  {% endif %}#}
+
+{#  {% if page.alert_banner %}#}
+{#    <div class="header__banner">{{ page.alert_banner }}</div>#}
+{#  {% endif %}#}
+
+{#  <div class="header__branding">#}
+{#    <div class="container header__branding-container">#}
+{#      <a class="header__logo" href="/" title="LouisvilleKY.gov">#}
+{#        <img class="header__logo-image" src="/themes/custom/louisvilleky/images/logo.png" alt="LouisvilleKY.gov Logo" width="330" height="52">#}
+{#      </a>#}
+
+{#      <div class="header__search">#}
+{#        {{ drupal_entity('block', 'header_search', check_access=false) }}#}
+{#      </div>#}
+
+{#      <div class="header__btn--mobile">#}
+{#        <button class="header__btn" aria-label="Mobile Menu Button" aria-controls="header-menu-mobile" aria-haspopup="true" aria-expanded="false">#}
+{#          <span class="header__btn-icon active">{% include '@bootstrap-icons/list.svg' %}</span>#}
+{#          <span class="header__btn-icon">{% include '@bootstrap-icons/x.svg' %}</span>#}
+{#        </button>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+
+{#  <div class="header__content">{{ page.header }}</div>#}
+
+{#  <div class="header__content--mobile" id="header-menu-mobile" aria-hidden="true">#}
+{#    <div class="header__search">#}
+{#      {{ drupal_entity('block', 'header_search_mobile', check_access=false) }}#}
+{#    </div>#}
+
+{#    {{ page.header_mobile }}#}
+{#  </div>#}
+{#</header>#}
