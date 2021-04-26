@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "874cbb3e071f862092bfd676b78defbe",
+    "content-hash": "608389a0e7cc287b4882c03c653b8655",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4116,7 +4116,7 @@
         },
         {
             "name": "pantheon-upstreams/upstream-configuration",
-            "version": "dev-mav9-theme",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "upstream-configuration",
@@ -7224,6 +7224,15 @@
                 }
             ],
             "time": "2020-10-24T11:50:19+00:00"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "4.6.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/twbs/bootstrap/releases/download/v4.6.0/bootstrap-4.6.0-dist.zip"
+            },
+            "type": "drupal-library"
         },
         {
             "name": "twig/twig",

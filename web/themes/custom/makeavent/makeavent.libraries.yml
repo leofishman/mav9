@@ -6,11 +6,11 @@ global-css:
     base:
       dist/css/global.css: {}
     layout:
-      /libraries/bootstrap/bootstrap.min.css: { minified: true }
+      /libraries/bootstrap/css/bootstrap.css: { minified: true }
 
 global-js:
   js:
-    /libraries/bootstrap/bootstrap.min.js: { minified: true }
+    /libraries/bootstrap/js/bootstrap.js: { minified: true }
   dependencies:
     - core/jquery
 

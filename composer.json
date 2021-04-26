@@ -1,75 +1,88 @@
 {
-    "name": "pantheon-upstreams/drupal-project",
-    "description": "Install Drupal 9 with Composer on Pantheon.",
-    "type": "project",
-    "license": "MIT",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "path",
-            "url": "upstream-configuration"
+  "name": "pantheon-upstreams/drupal-project",
+  "description": "Install Drupal 9 with Composer on Pantheon.",
+  "type": "project",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "path",
+      "url": "upstream-configuration"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "twbs/bootstrap",
+        "version": "4.6.0",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/twbs/bootstrap/releases/download/v4.6.0/bootstrap-4.6.0-dist.zip",
+          "type": "zip"
         }
-    ],
-    "require": {
-        "drupal/admin_toolbar": "^3.0",
-        "drupal/color_field": "^2.4",
-        "drupal/components": "^2.4",
-        "drupal/devel": "^4.1",
-        "drupal/google_analytics": "^3.1",
-        "drupal/pathauto": "^1.8",
-        "drupal/social_link_field": "1.x-dev@dev",
-        "drupal/twig_tweak": "^3.0",
-        "drush/drush": "^10",
-        "pantheon-upstreams/upstream-configuration": "*"
+      }
     }
-    ,
-    "require-dev": {
-        "roave/security-advisories": "dev-latest"
+  ],
+  "require": {
+    "drupal/admin_toolbar": "^3.0",
+    "drupal/color_field": "^2.4",
+    "drupal/components": "^2.4",
+    "drupal/devel": "^4.1",
+    "drupal/google_analytics": "^3.1",
+    "drupal/pathauto": "^1.8",
+    "drupal/social_link_field": "1.x-dev@dev",
+    "drupal/twig_tweak": "^3.0",
+    "drush/drush": "^10",
+    "pantheon-upstreams/upstream-configuration": "*",
+    "twbs/bootstrap": "4.6.0"
+  }
+,
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/core": ["type:drupal-core"],
+      "web/libraries/{$name}": ["type:drupal-library"],
+      "web/modules/contrib/{$name}": ["type:drupal-module"],
+      "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+      "web/themes/contrib/{$name}": ["type:drupal-theme"],
+      "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+      "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"],
+      "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+      "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
     },
-    "conflict": {
-        "drupal/drupal": "*"
+    "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "extra": {
-        "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
-            "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"],
-            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
-            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
-        },
-        "composer-exit-on-patch-failure": true,
-        "patchLevel": {
-            "drupal/core": "-p2"
-        },
-        "drupal-scaffold": {
-            "allowed-packages": [
-                "pantheon-systems/drupal-integrations"
-            ],
-            "locations": {
-                "web-root": "./web"
-            },
-            "file-mapping": {
-                "[project-root]/.editorconfig": false,
-                "[project-root]/pantheon.upstream.yml": false,
-                "[project-root]/.gitattributes": false
-            }
-        }
-    },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "platform": {
-            "php": "7.4"
-        }
+    "drupal-scaffold": {
+      "allowed-packages": [
+        "pantheon-systems/drupal-integrations"
+      ],
+      "locations": {
+        "web-root": "./web"
+      },
+      "file-mapping": {
+        "[project-root]/.editorconfig": false,
+        "[project-root]/pantheon.upstream.yml": false,
+        "[project-root]/.gitattributes": false
+      }
     }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "platform": {
+      "php": "7.4"
+    }
+  }
 }
