@@ -60,10 +60,12 @@ component-libraries:
 # semi-colon is the region's description used on the admin/structure/block page.
 regions:
   header: 'Header'
-  sidebar_left: 'Sidebar Right - Company Data'
+  sidebar_left: 'Sidebar Left - Company Data'
   top_content: 'Top Content'
   content: 'Content'
   conference_data: 'Conference Data'
   participants: 'Participants'
   sidebar_right: 'Sidebar Right - Chat'
   hidden: 'Hidden'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
