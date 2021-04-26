@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Vent
 type: vent
-description: ''
+description: 'Vent Content Type.'
 help: ''
 new_revision: true
 preview_mode: 1

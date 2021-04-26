@@ -133,7 +133,7 @@ upstream/web/
 
 # Ignore file logs and other vendor files
 logs
-/web/themes/custom/mav/node_modules
+/web/themes/custom/makeavent/node_modules
 console
 /.editorconfig
 /.gitattributes

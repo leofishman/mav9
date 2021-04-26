@@ -1,0 +1,22 @@
+uuid: 9537d718-3ae4-4f23-a0a1-e4418fd10881
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - makeavent
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: makeavent_powered
+theme: makeavent
+region: hidden
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

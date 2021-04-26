@@ -1,0 +1,60 @@
+This is the Footer Twig Component.
+
+{#{% if page.footer_first and (page.footer_second or page.footer_third) %}#}
+{#  {% set class = 'col-lg-6' %}#}
+{#{% else %}#}
+{#  {% set class = 'col-lg-12' %}#}
+{#{% endif %}#}
+
+{#{% set primary_class = [#}
+{#  class,#}
+{#  'footer__item'#}
+{#] %}#}
+
+{#{% if page.footer_first and page.footer_second and page.footer_third %}#}
+{#  {% set class = 'col-lg-3 col-md-6' %}#}
+{#{% elseif page.footer_first and (page.footer_second or page.footer_third) %}#}
+{#  {% set class = 'col-lg-6' %}#}
+{#{% else %}#}
+{#  {% set class = 'col-lg-12' %}#}
+{#{% endif %}#}
+
+{#{% set secondary_class = [#}
+{#  class,#}
+{#  'footer__item'#}
+{#] %}#}
+
+{#<footer class="footer">#}
+{#  <div class="container">#}
+{#    <div class="row">#}
+{#      <div{{ create_attribute().addClass(primary_class) }}>#}
+{#        <div class="footer__branding">#}
+{#          <a class="footer__branding-link" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">#}
+{#            <img class="footer__branding-logo" src="/{{ directory }}/images/footer-logo.png" alt="Louisville, KY Logo" width="100" height="100" />#}
+{#            <span class="sr-only footer__branding-text">Louisville, KY</span>#}
+{#          </a>#}
+
+{#          <a class="footer__branding-link" href="https://www.govtech.com/cdg/government-experience/Government-Experience-Awards-2018-Winners-Announced.html">#}
+{#            <img class="footer__branding-logo" src="/{{ directory }}/images/gov-experience-2018.png" alt="Center for Digital Government, Overall City Government Experience Winner 2018" width="185" height="93">#}
+{#            <span class="sr-only footer__branding-text">Center for Digital Government, Overall City Government Experience Winner 2018</span>#}
+{#          </a>#}
+
+{#          <a class="footer__branding-link" href="https://medium.com/what-works-cities-certification/kansas-city-louisville-and-washington-dc-level-up-cef847c62a6f">#}
+{#            <img class="footer__branding-logo" src="/{{ directory }}/images/what-works-city-logo-gold-footer.png" alt="What Works Cities Gold 2019, Certified City" width="220" height="115">#}
+{#            <span class="sr-only footer__branding-text">What Works Cities Gold 2019, Certified City</span>#}
+{#          </a>#}
+{#        </div>#}
+
+{#        {{ page.footer_first }}#}
+{#      </div>#}
+
+{#      {% if page.footer_second %}#}
+{#        <div{{ create_attribute().addClass(secondary_class) }}>{{ page.footer_second }}</div>#}
+{#      {% endif %}#}
+
+{#      {% if page.footer_third %}#}
+{#        <div{{ create_attribute().addClass(secondary_class) }}>{{ page.footer_third }}</div>#}
+{#      {% endif %}#}
+{#    </div>#}
+{#  </div>#}
+{#</footer>#}

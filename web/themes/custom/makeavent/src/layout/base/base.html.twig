@@ -1,0 +1,21 @@
+<div class="layout-page">
+  {% block header %}
+    {% include '@component/header/header.html.twig' %}
+  {% endblock %}
+
+  {% block main %}
+    <main class="layout-content" id="main-content" role="main" tabindex="-1">
+      {% block body %}
+        <div class="container-fluid p-0">
+          {{ page.top_content }}
+          {{ page.content }}
+        </div>
+      {% endblock %}
+    </main>
+  {% endblock %}
+
+  {% block footer %}
+    Footer
+    {% include '@component/footer/footer.html.twig' %}
+  {% endblock %}
+</div>

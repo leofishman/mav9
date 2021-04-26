@@ -1,0 +1,22 @@
+uuid: 9aae084f-040c-4d79-92d9-853138cfeb6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - makeavent
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: makeavent_content
+theme: makeavent
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

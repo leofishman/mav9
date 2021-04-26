@@ -1,0 +1,17 @@
+uuid: bb485f1c-8d23-4fc6-9226-f8aea97d7ac5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Home Page'
+type: home_page
+description: 'Home page content.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

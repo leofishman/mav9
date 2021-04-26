@@ -21,6 +21,7 @@
         "drupal/google_analytics": "^3.1",
         "drupal/pathauto": "^1.8",
         "drupal/social_link_field": "1.x-dev@dev",
+        "drupal/twig_tweak": "^3.0",
         "drush/drush": "^10",
         "pantheon-upstreams/upstream-configuration": "*"
     }
