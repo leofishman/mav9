@@ -8,7 +8,6 @@ const rename = require('gulp-rename');
 
 // Export our tasks.
 module.exports = {
-  // Move any fonts to where Pattern Lab is lookinging for them.
   moveFonts: function () {
     return src(
       [
@@ -26,7 +25,7 @@ module.exports = {
           return path;
         })
       )
-      .pipe(dest('./dist/fonts'));
+      .pipe(dest('./dist/fonts/assets'));
   }
   // Move CSS specific to styling Pattern Lab.
   // movePatternCSS: function () {

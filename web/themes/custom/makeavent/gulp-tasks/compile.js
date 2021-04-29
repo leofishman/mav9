@@ -34,7 +34,18 @@ module.exports = {
       )
       .pipe(
         rename(function (path) {
-          path.dirname = '';
+          let changed = false;
+          if (path.dirname.includes('components')) {
+            path.dirname = 'components';
+            changed = true;
+          }
+          if (path.dirname.includes('layout')) {
+            path.dirname = 'layout';
+            changed = true;
+          }
+          if (!changed) {
+            path.dirname = '';
+          }
           return path;
         })
       )
