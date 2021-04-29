@@ -14,6 +14,11 @@ global-js:
   dependencies:
     - core/jquery
 
+header:
+  css:
+    component:
+      dist/css/components/header.css: {}
+
 # Example external library.
 # webfonts:
 #   version: 1.x

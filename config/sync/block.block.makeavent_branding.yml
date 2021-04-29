@@ -1,6 +1,6 @@
 uuid: 30da5df8-8d45-44fe-bdb0-4edab736566e
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: makeavent_branding
 theme: makeavent
 region: hidden
-weight: -7
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:

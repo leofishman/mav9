@@ -1,6 +1,6 @@
 uuid: 46c05e21-c3c7-4a0d-81ca-df9b1f475c26
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
 id: makeavent_messages
 theme: makeavent
-region: hidden
-weight: -2
+region: content
+weight: -5
 provider: null
 plugin: system_messages_block
 settings:
