@@ -8,8 +8,8 @@ _core:
   default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: makeavent_local_actions
 theme: makeavent
-region: content
-weight: -3
+region: footer
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:
