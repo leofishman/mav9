@@ -3,18 +3,30 @@
     {% include '@component/header/header.html.twig' %}
   {% endblock %}
 
-  {% block main %}
-    <main class="layout-content" id="main-content" role="main" tabindex="-1">
-      {% block body %}
-        <div class="container-fluid p-0">
-          {{ page.top_content }}
-          {{ page.content }}
-        </div>
-      {% endblock %}
-    </main>
-  {% endblock %}
+  <div class="container-fluid px-0">
+    <div class="row m-0">
+      <div class="col-lg-10 px-0 content_page__main">
+        {% block main %}
+          <main class="layout-content" id="main-content" role="main" tabindex="-1">
+            {% block body %}
+              <div class="container-fluid p-0">
+                {{ page.top_content }}
+                {{ page.content }}
+              </div>
+            {% endblock %}
+          </main>
+        {% endblock %}
 
-  {% block footer %}
-    {% include '@component/footer/footer.html.twig' %}
-  {% endblock %}
+        {% block footer %}
+          {% include '@component/footer/footer.html.twig' %}
+        {% endblock %}
+      </div>
+
+      {% block aside %}
+        <aside class="col-lg-2 px-0 border border-secondary" id="chat" role="complementary" tabindex="-1" style="background-color: #F4EDFB;">
+          {{ page.sidebar_right }}
+        </aside>
+      {% endblock %}
+    </div>
+  </div>
 </div>
