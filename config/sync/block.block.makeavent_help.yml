@@ -11,7 +11,7 @@ _core:
 id: makeavent_help
 theme: makeavent
 region: hidden
-weight: 1
+weight: 0
 provider: null
 plugin: help_block
 settings:

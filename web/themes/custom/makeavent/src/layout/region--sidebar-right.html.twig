@@ -13,7 +13,9 @@
  */
 #}
 {% if content %}
-  <div{{ attributes }}>
+  <aside{{ attributes.addClass('col-lg-2 px-0 border border-secondary position-fixed bottom-0') }}
+    id="chat" role="complementary" tabindex="-1"
+    style="background-color: #F4EDFB; height: calc(100vh - 70px); right: 0">
     {{ content }}
-  </div>
+  </aside>
 {% endif %}

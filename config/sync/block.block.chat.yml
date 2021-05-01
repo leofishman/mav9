@@ -14,7 +14,7 @@ dependencies:
 id: chat
 theme: makeavent
 region: sidebar_right
-weight: 0
+weight: -7
 provider: null
 plugin: 'block_content:e8c3cb0d-14b1-4c5e-97fb-8561ba2a5813'
 settings:

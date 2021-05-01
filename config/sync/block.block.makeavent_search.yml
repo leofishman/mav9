@@ -11,7 +11,7 @@ _core:
 id: makeavent_search
 theme: makeavent
 region: hidden
-weight: -5
+weight: -6
 provider: null
 plugin: search_form_block
 settings:
