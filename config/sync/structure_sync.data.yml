@@ -1,0 +1,18 @@
+log: 1
+taxonomies:
+  tags: {  }
+menus: {  }
+blocks:
+  -
+    info: Chat
+    langcode: en
+    uuid: e8c3cb0d-14b1-4c5e-97fb-8561ba2a5813
+    bundle: basic
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<-- This is here to be able to use the block--chat twig template and still maintain using the sidebar region.\r\nWe could have been used directly the region twig template but in that case with don't have a block to move in Drupal UI -->"
+          summary: ''
+          format: basic_html
