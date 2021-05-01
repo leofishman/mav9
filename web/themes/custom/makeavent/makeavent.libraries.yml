@@ -4,7 +4,7 @@ global-css:
     # loads stylesheets based on the SMACSS ordering of:
     # base, layout, component, state, theme
     base:
-      dist/css/global.css: {}
+      dist/css/global/global.css: {}
     layout:
       /libraries/bootstrap/css/bootstrap.css: { minified: true }
 

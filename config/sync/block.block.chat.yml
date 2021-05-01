@@ -1,0 +1,49 @@
+uuid: f1bb900d-6384-402a-926f-f6e934531222
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e8c3cb0d-14b1-4c5e-97fb-8561ba2a5813'
+  module:
+    - block_content
+    - ctools
+    - node
+    - user
+  theme:
+    - makeavent
+id: chat
+theme: makeavent
+region: sidebar_right
+weight: 0
+provider: null
+plugin: 'block_content:e8c3cb0d-14b1-4c5e-97fb-8561ba2a5813'
+settings:
+  id: 'block_content:e8c3cb0d-14b1-4c5e-97fb-8561ba2a5813'
+  label: Chat
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      vent: vent
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      vent: vent
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
