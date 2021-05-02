@@ -430,8 +430,8 @@
                        SHOW_JITSI_WATERMARK: false,
                        JITSI_WATERMARK_LINK: 'https://www.makeavent.com',
                        TOOLBAR_BUTTONS: [
-                           'mute-everyone', 'fullscreen', 'chat',
-                           'microphone', 'camera', 'desktop'
+                           'mute-everyone', 'fullscreen', 'chat', 'tileview',
+                           'microphone', 'camera', 'desktop', 'settings','videobackgroundblur'
                         ],
                      },
                     configOverwrite: {

@@ -78,7 +78,7 @@ content:
     weight: 2
     label: hidden
     settings:
-      domain: meet.jit.si
+      domain: meet-app.makeavent.com
     third_party_settings: {  }
     type: mav_jitsi_conference_default
     region: content
